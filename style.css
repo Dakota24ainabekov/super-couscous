@@ -1,0 +1,82 @@
+[СКОПИРОВАТЬ ВСЁ]
+
+body {
+    margin: 0;
+    background: linear-gradient(180deg, #FFF6F0, #F8ECFF);
+    font-family: "Poppins", sans-serif;
+}
+
+.screen {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation: fadeSlide 0.4s ease-out forwards;
+}
+
+.hidden { display: none; }
+
+h2 {
+    text-align: center;
+    color: #8F71B5;
+    font-size: 26px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #B48FD6;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 14px;
+    border: 2px solid #E3D4FF;
+    font-size: 17px;
+    transition: .25s;
+}
+
+input:focus, textarea:focus {
+    border-color: #C3A7FF;
+    box-shadow: 0 0 10px #cbb7ff66;
+}
+
+button {
+    padding: 13px;
+    border-radius: 16px;
+    border: none;
+    background: linear-gradient(135deg, #CBB7E4, #A88BC2);
+    color: white;
+    font-size: 18px;
+    transition: .2s;
+    box-shadow: 0 6px 15px #b99bdc33;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.icon-row { display:flex; justify-content:space-between; }
+
+.icon-btn {
+    width: 45%;
+    padding: 20px;
+    background: linear-gradient(135deg, #FFFFFFAA, #F6E8FF);
+    border-radius: 20px;
+    cursor: pointer;
+    text-align:center;
+    font-size: 18px;
+}
+
+.icon-btn span {
+    font-size: 32px;
+}
+
+.ai-box {
+    background: #FAF0FF;
+    padding: 14px;
+    border-radius: 12px;
+    margin-top:10px;
+}
+
+[КОНЕЦ]

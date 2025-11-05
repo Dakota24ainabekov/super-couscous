@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Girl Notes Yoga</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <div class="screen" id="screen-login">
+    <h2>Welcome 💗</h2>
+    <p class="subtitle">Введите имя, чтобы создать аккаунт</p>
+    <input id="login-name" type="text" placeholder="Your name">
+    <button id="btn-login">Enter</button>
+    <p class="error" id="login-error"></p>
+  </div>
+
+  <div class="screen hidden" id="screen-main">
+    <h2 id="user-title">Hello!</h2>
+    <div class="icon-row">
+      <div class="icon-btn" onclick="openScreen('screen-notes')"><span>📝</span> Notes</div>
+      <div class="icon-btn" onclick="openScreen('screen-affirm')"><span>🔮</span> Affirmations</div>
+    </div>
+    <button class="logout-btn" onclick="logout()">Log out</button>
+  </div>
+
+  <div class="screen hidden" id="screen-notes">
+    <h2>My Notes 📝</h2>
+    <textarea id="notes-input" placeholder="Что чувствуешь? Напиши..."></textarea>
+
+    <div class="row">
+      <button id="btn-add-note">Save + AI</button>
+      <button id="btn-add-local">Just save</button>
+    </div>
+
+    <div id="ai-container" class="ai-container hidden">
+      <div id="ai-loading" class="ai-loading">Analyzing…</div>
+      <div id="ai-response" class="ai-box"></div>
+      <button id="btn-save-ai" class="small">Save AI note</button>
+    </div>
+
+    <h3>Your notes</h3>
+    <ul id="notes-list"></ul>
+    <button class="back" onclick="openScreen('screen-main')">← Back</button>
+  </div>
+
+  <div class="screen hidden" id="screen-affirm">
+    <h2>Affirmations 🔮</h2>
+    <p id="affirm-text">Tap “New” ✨</p>
+
+    <div class="row">
+      <button id="btn-new-affirm">New affirmation</button>
+      <button id="btn-save-affirm">❤️ Save</button>
+    </div>
+
+    <h3>Saved</h3>
+    <ul id="affirm-list"></ul>
+
+    <button class="back" onclick="openScreen('screen-main')">← Back</button>
+  </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
